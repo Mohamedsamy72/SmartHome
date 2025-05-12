@@ -1,0 +1,15 @@
+#include "flame_sensor.h"
+
+void FlameSensor_init(void){
+
+	GPIO_setupPinDirection(PORTB_ID,PIN2_ID,PIN_OUTPUT);
+
+}
+
+
+uint8 FlameSensor_getValue(void){
+
+
+
+}
+

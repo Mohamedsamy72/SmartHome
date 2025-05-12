@@ -1,0 +1,54 @@
+#include "adc.h"
+#include "buzzer.h"
+#include "dc_motor.h"
+#include "flame_sensor.h"
+#include "lcd.h"
+#include "ldr.h"
+#include "led.h"
+#include "lm35_sensor.h"
+#include "pwm.h"
+
+void initialization(void);
+void light_intensity(void);
+
+
+int main(void){
+
+	initialization();
+
+	LCD_displayString("Temp = ");
+
+	DC_MOTOR_rotate(ACW,50);
+
+	while(1){
+
+		LCD_displayintRowColumn(0,7,((int)(LDR_getLightIntensity())));
+
+	}
+}
+
+void initialization(void){
+	ADC_init();
+	BUZZER_init();
+	DC_MOTOR_init();
+	FlameSensor_init();
+	LCD_init();
+	LEDS_init();
+}
+
+void light_intensity(void){
+
+	if((int)(LDR_getLightIntensity()) < 15){
+		LED_on(RED_LED);
+		LED_on(GREEN_LED);
+		LED_on(BLUE_LED);
+	}
+
+	else if((int)(LDR_getLightIntensity()) >= 16 || (int)(LDR_getLightIntensity()) <= 50) {
+
+		LED_on(RED_LED);
+		LED_on(GREEN_LED);
+		LED_off(BLUE_LED);
+
+	}
+}

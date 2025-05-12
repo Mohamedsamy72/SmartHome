@@ -1,0 +1,26 @@
+#include "lcd.h"
+#include "lm35_sensor.h"
+#include "ldr.h"
+#include "flame_sensor.h"
+#include "dc_motor.h"
+#include "adc.h"
+#include "pwm.h"
+
+
+
+
+
+int main(void){
+	DC_MOTOR_init();
+	FlameSensor_init();
+	ADC_init();
+	LCD_init();
+	LCD_displayString("Temp = ");
+	LCD_intgerToString((int)FlameSensor_getValue());
+
+	DC_MOTOR_rotate(CW,50);
+
+	while(1){
+
+	}
+}

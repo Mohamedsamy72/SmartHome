@@ -1,0 +1,38 @@
+05:31:06 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10130 bytes (30.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+05:31:06 Build Finished. 0 errors, 0 warnings. (took 497ms)
+

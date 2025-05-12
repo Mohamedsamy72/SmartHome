@@ -1,0 +1,15 @@
+#include "ldr.h"
+#include "adc.h"
+
+uint16 LDR_getLightIntensity(void){
+
+	uint16 lightIntensity = 0;
+	uint16 adc_value = 0;
+
+	adc_value = ADC_readChannel(LDR_SENSOR_CHANNEL);
+	lightIntensity = 100-((adc_value)*100/LDR_SENSOR_MAX_VOLT);
+
+
+	return lightIntensity;
+}
+

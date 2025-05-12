@@ -1,0 +1,22 @@
+#include "flame_sensor.h"
+#include "common_macros.h"
+#include "avr/io.h"
+
+void FlameSensor_init(void){
+
+	GPIO_setupPinDirection(FLAME_SENSOR_PORT,FLAME_SENSOR_PIN,PIN_OUTPUT);
+
+}
+
+
+uint8 FlameSensor_getValue(void){
+
+	uint8 flame_value;
+
+	if(BIT_IS_SET(FLAME_SENSOR_PORT,FLAME_SENSOR_PIN));
+
+
+
+	return flame_value;
+}
+

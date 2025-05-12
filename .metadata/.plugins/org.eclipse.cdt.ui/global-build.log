@@ -1,0 +1,4022 @@
+06:34:20 **** Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./gpio.o ./led.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o:(.init9+0x0): undefined reference to `main'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+06:34:53 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./gpio.o ./led.o ./main.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1934 bytes (5.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:29:27 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+../buzzer.c: In function 'BUZZER_init':
+../buzzer.c:6: warning: implicit declaration of function 'BUZZER_off'
+../buzzer.c: At top level:
+../buzzer.c:16: warning: conflicting types for 'BUZZER_off'
+../buzzer.c:6: warning: previous implicit declaration of 'BUZZER_off' was here
+Finished building: ../buzzer.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+../lm35_sensor.c:14:17: error: adc.h: No such file or directory
+../lm35_sensor.c: In function 'LM35_getTemperature':
+../lm35_sensor.c:27: warning: implicit declaration of function 'ADC_readChannel'
+../lm35_sensor.c:30: error: 'ADC_REF_VOLT_VALUE' undeclared (first use in this function)
+../lm35_sensor.c:30: error: (Each undeclared identifier is reported only once
+../lm35_sensor.c:30: error: for each function it appears in.)
+../lm35_sensor.c:30: error: 'ADC_MAXIMUM_VALUE' undeclared (first use in this function)
+make: *** [lm35_sensor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+04:30:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+../lm35_sensor.c:14:17: error: adc.h: No such file or directory
+../lm35_sensor.c: In function 'LM35_getTemperature':
+../lm35_sensor.c:27: warning: implicit declaration of function 'ADC_readChannel'
+../lm35_sensor.c:30: error: 'ADC_REF_VOLT_VALUE' undeclared (first use in this function)
+../lm35_sensor.c:30: error: (Each undeclared identifier is reported only once
+../lm35_sensor.c:30: error: for each function it appears in.)
+../lm35_sensor.c:30: error: 'ADC_MAXIMUM_VALUE' undeclared (first use in this function)
+make: *** [lm35_sensor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+04:30:20 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+../lm35_sensor.c:14:17: error: adc.h: No such file or directory
+../lm35_sensor.c: In function 'LM35_getTemperature':
+../lm35_sensor.c:27: warning: implicit declaration of function 'ADC_readChannel'
+../lm35_sensor.c:30: error: 'ADC_REF_VOLT_VALUE' undeclared (first use in this function)
+../lm35_sensor.c:30: error: (Each undeclared identifier is reported only once
+../lm35_sensor.c:30: error: for each function it appears in.)
+../lm35_sensor.c:30: error: 'ADC_MAXIMUM_VALUE' undeclared (first use in this function)
+make: *** [lm35_sensor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+04:31:24 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+../lm35_sensor.c:14:17: error: adc.h: No such file or directory
+../lm35_sensor.c: In function 'LM35_getTemperature':
+../lm35_sensor.c:27: warning: implicit declaration of function 'ADC_readChannel'
+../lm35_sensor.c:30: error: 'ADC_REF_VOLT_VALUE' undeclared (first use in this function)
+../lm35_sensor.c:30: error: (Each undeclared identifier is reported only once
+../lm35_sensor.c:30: error: for each function it appears in.)
+../lm35_sensor.c:30: error: 'ADC_MAXIMUM_VALUE' undeclared (first use in this function)
+make: *** [lm35_sensor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+06:02:33 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9280 bytes (28.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:30:23 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:21: warning: implicit declaration of function 'LCD_integerToString'
+Finished building: ../main.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:21: undefined reference to `LCD_integerToString'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+06:31:40 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:36:19 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:39:58 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:41:42 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:43:20 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9326 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:43:35 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9326 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:43:54 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:48:02 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:52:56 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9326 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:55:04 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:58:32 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9268 bytes (28.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:58:41 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9268 bytes (28.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:59:36 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9330 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:01:03 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:01:15 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:06:30 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9272 bytes (28.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:11:23 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:44:11 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:45:45 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:45:53 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:45:56 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:50:38 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:53:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:53:15 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:12:16 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:18:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:18:34 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:18:45 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:14 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:24 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:34 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:43 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:51 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:59 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:21:54 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9346 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:22:17 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:24:24 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:24:37 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9334 bytes (28.5% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:37:12 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../ldr.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ldr.d" -MT"ldr.o" -c -o "ldr.o" "../ldr.c"
+../ldr.c: In function 'LDR_getLightIntensity':
+../ldr.c:10: error: expected ';' before ')' token
+../ldr.c:10: error: expected statement before ')' token
+../ldr.c:10: error: expected expression before '/' token
+make: *** [ldr.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:38:25 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../ldr.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ldr.d" -MT"ldr.o" -c -o "ldr.o" "../ldr.c"
+Finished building: ../ldr.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9460 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:39:00 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+../main.c:17: warning: implicit declaration of function 'LDR_getLightIntensity'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9456 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:39:24 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+../main.c:17: warning: implicit declaration of function 'LDR_getLightIntensity'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9456 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:39:33 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+../main.c:17: warning: implicit declaration of function 'LDR_getLightIntensity'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9456 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:48:06 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../ldr.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ldr.d" -MT"ldr.o" -c -o "ldr.o" "../ldr.c"
+Finished building: ../ldr.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:51:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../ldr.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ldr.d" -MT"ldr.o" -c -o "ldr.o" "../ldr.c"
+Finished building: ../ldr.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:03:28 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+../flame_sensor.c: In function 'FlameSensor_init':
+../flame_sensor.c:5: warning: implicit declaration of function 'GPIO_setupPinDirection'
+../flame_sensor.c:5: error: 'FLAME_SENSOR_PORT' undeclared (first use in this function)
+../flame_sensor.c:5: error: (Each undeclared identifier is reported only once
+../flame_sensor.c:5: error: for each function it appears in.)
+../flame_sensor.c:5: error: 'FLAME_SENSOR_PIN' undeclared (first use in this function)
+../flame_sensor.c:5: error: 'PIN_OUTPUT' undeclared (first use in this function)
+../flame_sensor.c: At top level:
+../flame_sensor.c:10: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'FlameSensor_getValue'
+make: *** [flame_sensor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:05:01 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+../flame_sensor.c: In function 'FlameSensor_getValue':
+../flame_sensor.c:14: warning: control reaches end of non-void function
+Finished building: ../flame_sensor.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:196: warning: control reaches end of non-void function
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:302: warning: control reaches end of non-void function
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../ldr.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"ldr.d" -MT"ldr.o" -c -o "ldr.o" "../ldr.c"
+Finished building: ../ldr.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:14: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9518 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:05:18 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+../flame_sensor.c: In function 'FlameSensor_getValue':
+../flame_sensor.c:14: warning: control reaches end of non-void function
+Finished building: ../flame_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9518 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:05:29 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+../flame_sensor.c: In function 'FlameSensor_getValue':
+../flame_sensor.c:14: warning: control reaches end of non-void function
+Finished building: ../flame_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9518 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:15:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+Finished building: ../flame_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:15:49 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:14: warning: implicit declaration of function 'Flame_sensor_init'
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:19: warning: implicit declaration of function 'Flame_Sensort_getValue'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:14: undefined reference to `Flame_sensor_init'
+../main.c:19: undefined reference to `Flame_Sensort_getValue'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:15:57 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:14: warning: implicit declaration of function 'Flame_sensor_init'
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:19: warning: implicit declaration of function 'Flame_Sensor_getValue'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:14: undefined reference to `Flame_sensor_init'
+../main.c:19: undefined reference to `Flame_Sensor_getValue'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:16:04 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:14: warning: implicit declaration of function 'Flame_Sensor_init'
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:19: warning: implicit declaration of function 'Flame_Sensor_getValue'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:14: undefined reference to `Flame_Sensor_init'
+../main.c:19: undefined reference to `Flame_Sensor_getValue'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:16:22 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9530 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:19:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+Finished building: ../flame_sensor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9554 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:20:25 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../flame_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"flame_sensor.d" -MT"flame_sensor.o" -c -o "flame_sensor.o" "../flame_sensor.c"
+Finished building: ../flame_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9554 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:22:29 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:20: warning: implicit declaration of function 'DC_MOTOR_rotate'
+../main.c:20: error: 'CW' undeclared (first use in this function)
+../main.c:20: error: (Each undeclared identifier is reported only once
+../main.c:20: error: for each function it appears in.)
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+04:22:47 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:20: warning: implicit declaration of function 'DC_MOTOR_rotate'
+../main.c:20: error: 'ACW' undeclared (first use in this function)
+../main.c:20: error: (Each undeclared identifier is reported only once
+../main.c:20: error: for each function it appears in.)
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+04:23:00 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:20: warning: implicit declaration of function 'DC_MOTOR_rotate'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9566 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:24:14 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:15: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+../main.c:22: warning: implicit declaration of function 'DC_MOTOR_rotate'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9566 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:24:43 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'DC_MOTOR_init'
+../main.c:15: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9554 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:25:54 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:16: warning: implicit declaration of function 'ADC_init'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:26:52 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:27:12 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:27:59 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:28:13 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9570 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:28:26 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:28:35 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:33:03 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:36:31 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:10:55 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:11:57 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:12:10 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:20:20 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:20:41 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:20:52 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9562 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+03:38:33 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9588 bytes (29.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+03:40:28 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9598 bytes (29.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+03:42:45 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:23: error: invalid use of void expression
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+03:44:59 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9610 bytes (29.3% Full)
+(.text + .data + .bootloader)
+
+Data:        278 bytes (13.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+03:45:53 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:23: warning: implicit declaration of function 'LCD_integerToString'
+../main.c:23: warning: passing argument 3 of 'LCD_displayStringRowColumn' makes pointer from integer without a cast
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:23: undefined reference to `LCD_integerToString'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+03:50:22 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+../lcd.c: At top level:
+../lcd.c:213: warning: return type defaults to 'int'
+../lcd.c: In function 'LCD_displayintRowColumn':
+../lcd.c:217: warning: control reaches end of non-void function
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:23: warning: implicit declaration of function 'LCD_displayintRowColumn'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9692 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+03:51:10 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9688 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+03:51:25 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9688 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:10:28 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9820 bytes (30.0% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:15:30 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9820 bytes (30.0% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:20:04 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'fan_speed_function'
+../main.c: At top level:
+../main.c:76: warning: conflicting types for 'fan_speed_function'
+../main.c:28: warning: previous implicit declaration of 'fan_speed_function' was here
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9920 bytes (30.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:20:18 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9920 bytes (30.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:20:40 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:28: undefined reference to `fan_speed_control'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+04:20:55 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9920 bytes (30.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:21:30 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9920 bytes (30.3% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:33:22 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9956 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+04:36:15 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:07:59 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'fire_detection':
+../main.c:103: error: expected declaration specifiers or '...' before numeric constant
+../main.c:103: error: expected declaration specifiers or '...' before numeric constant
+../main.c:103: error: expected declaration specifiers or '...' before string constant
+../main.c:103: error: conflicting types for 'LCD_displayStringRowColumn'
+../main.c:103: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+../lcd.h:100: error: previous declaration of 'LCD_displayStringRowColumn' was here
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+05:09:05 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9996 bytes (30.5% Full)
+(.text + .data + .bootloader)
+
+Data:        288 bytes (14.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:11:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10002 bytes (30.5% Full)
+(.text + .data + .bootloader)
+
+Data:        288 bytes (14.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:11:32 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10002 bytes (30.5% Full)
+(.text + .data + .bootloader)
+
+Data:        288 bytes (14.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:20:16 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'display':
+../main.c:126: warning: implicit declaration of function 'LCD_integerToString'
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+./main.o: In function `main':
+../main.c:29: undefined reference to `LCD_integerToString'
+make: *** [Eclipse.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+05:20:54 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10072 bytes (30.7% Full)
+(.text + .data + .bootloader)
+
+Data:        310 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:21:09 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10072 bytes (30.7% Full)
+(.text + .data + .bootloader)
+
+Data:        310 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:22:08 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10072 bytes (30.7% Full)
+(.text + .data + .bootloader)
+
+Data:        310 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:22:37 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10078 bytes (30.8% Full)
+(.text + .data + .bootloader)
+
+Data:        310 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:22:45 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10078 bytes (30.8% Full)
+(.text + .data + .bootloader)
+
+Data:        310 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:24:35 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10102 bytes (30.8% Full)
+(.text + .data + .bootloader)
+
+Data:        318 bytes (15.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:25:41 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10098 bytes (30.8% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:27:11 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10114 bytes (30.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:28:27 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10130 bytes (30.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+05:31:06 **** Incremental Build of configuration Debug for project Eclipse ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Eclipse.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse.map -mmcu=atmega32 -o "Eclipse.elf"  ./adc.o ./buzzer.o ./dc_motor.o ./flame_sensor.o ./gpio.o ./lcd.o ./ldr.o ./led.o ./lm35_sensor.o ./main.o ./pwm.o   
+Finished building target: Eclipse.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse.elf  >"Eclipse.lss"
+Finished building: Eclipse.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Eclipse.elf  "Eclipse.hex"
+Finished building: Eclipse.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Eclipse.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10130 bytes (30.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
